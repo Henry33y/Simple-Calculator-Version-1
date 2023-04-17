@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+*,::before,::after{
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+#container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 320px;
+    height:500px;
+    padding-top: 30px;
+    border-radius: 30px;
+    background-color: black;
+}
+#content{
+    height: 100px;
+}
+#displayarea{
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    border: none;
+    outline: 0;
+    font-size: 3.5em;
+    direction:ltr;
+    text-align: right;
+}
+#calcButtons{
+    height: 330px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border:none;
+    font-size: 1.2em;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+}
+.btn:hover{
+    background-color:white;
+    color: black;
+}
+.blackBtn{
+    background-color: rgb(68, 66, 66);
+}
+.grayBtn{
+    background-color: rgb(156, 154, 154);
+}
+.orangeBtn{
+    background-color: orange;
+}
+.spanBtn{
+    flex-grow: 2;
+}
+.zeroBtn{
+    width: 85%;
+    border-radius: 100px;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%*(1/4));
+    height:calc(100%*(1/5));
+}
+.Attribution{
+    margin: 0;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+#gradient{
+    font-size: 1.1em;
+    color: transparent;
+    background: linear-gradient(to right,red,orange,blue,green);
+    -webkit-background-clip: text;
+}
+@media screen and (max-height:600px) and (max-width:350px){
+    #container{
+        width:95%;
+        height:450px;
+    }
+    #displayarea{
+        height: 100px;
+    }
+    #calcButtons{
+        height: 300px;
+    }
+}
